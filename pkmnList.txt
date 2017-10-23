@@ -1,0 +1,841 @@
+#001 Bulbasaur Grass Poison 6
+#002 Ivysaur Grass Poison 6
+#003 Venusaur Grass Poison 3
+#004 Charmander Fire 6
+#005 Charmeleon Fire 6
+#006 Charizard Fire Flying 5
+#007 Squirtle Water 6
+#008 Wartortle Water 6
+#009 Blastoise Water 3
+#010 Caterpie Bug 6
+#011 Metapod Bug 6
+#012 Butterfree Bug Flying 5
+#013 Weedle Bug Poison 6
+#014 Kakuna Bug Poison 6
+#015 Beedrill Bug Poison 5
+#016 Pidgey Normal Flying 6
+#017 Pidgeotto Normal Flying 6
+#018 Pidgeot Normal Flying 5
+#019 Rattata Normal 6
+#019 Rattata-Alola Dark Normal 6
+#020 Raticate Normal 5
+#020 Raticate-Alola Dark Normal 5
+#021 Spearow Normal Flying 6
+#022 Fearow Normal Flying 5
+#023 Ekans Poison 6
+#024 Arbok Poison 5
+#025 Pikachu Electric 5
+#026 Raichu Electric 5
+#026 Raichu-Alola Electric Psychic 3
+#027 Sandshrew Ground 6
+#027 Sandshrew-Alola Ice Steel 6
+#028 Sandslash Ground 5
+#028 Sandslash-Alola Ice Steel 4
+#029 NidoranFemale Poison 6
+#030 Nidorina Poison 6
+#031 Nidoqueen Poison Ground 2
+#032 NidoranMale Poison 6
+#033 Nidorino Poison 6
+#034 Nidoking Poison Ground 2
+#035 Clefairy Fairy 6
+#036 Clefable Fairy 1
+#037 Vulpix Fire 6
+#037 Vulpix-Alola Ice 6
+#038 Ninetales Fire 3
+#038 Ninetales-Alola Ice Fairy 3
+#039 Jigglypuff Normal Fairy 6
+#040 Wigglytuff Normal Fairy 5
+#041 Zubat Poison Flying 6
+#042 Golbat Poison Flying 4
+#043 Oddish Grass Poison 6
+#044 Gloom Grass Poison 6
+#045 Vileplume Grass Poison 5
+#046 Paras Bug Grass 6
+#047 Parasect Bug Grass 5
+#048 Venonat Bug Poison 6
+#049 Venomoth Bug Poison 3
+#050 Diglett Ground 6
+#050 Diglett-Alola Ground Steel 6
+#051 Dugtrio Ground 3
+#051 Dugtrio-Alola Ground Steel 4
+#052 Meowth Normal 6
+#052 Meowth-Alola Dark 6
+#053 Persian Normal 5
+#053 Persian-Alola Dark 5
+#054 Psyduck Water 6
+#055 Golduck Water 5
+#056 Mankey Fighting 6
+#057 Primeape Fighting 5
+#058 Growlithe Fire 6
+#059 Arcanine Fire 3
+#060 Poliwag Water 6
+#061 Poliwhirl Water 6
+#062 Poliwrath Water Fighting 4
+#063 Abra Psychic 6
+#064 Kadabra Psychic 5
+#065 Alakazam Psychic 2
+#066 Machop Fighting 6
+#067 Machoke Fighting 5
+#068 Machamp Fighting 3
+#069 Bellsprout Grass Poison 6
+#070 Weepinbell Grass Poison 6
+#071 Victreebel Grass Poison 5
+#072 Tentacool Water Poison 6
+#073 Tentacruel Water Poison 3
+#074 Geodude Rock Ground 6
+#074 Geodude-Alola Rock Electric 6
+#075 Graveler Rock Ground 6
+#075 Graveler-Alola Rock Electric 6
+#076 Golem Rock Ground 5
+#076 Golem-Alola Rock Electric 4
+#077 Ponyta Fire 6
+#078 Rapidash Fire 5
+#079 Slowpoke Water Psychic 6
+#080 Slowbro Water Psychic 2
+#081 Magnemite Electric Steel 6
+#082 Magneton Electric Steel 4
+#083 Farfetchd Normal Flying 5
+#084 Doduo Normal Flying 6
+#085 Dodrio Normal Flying 5
+#086 Seel Water 6
+#087 Dewgong Water Ice 5
+#088 Grimer Poison 6
+#088 Grimer-Alola Poison Dark 6
+#089 Muk Poison 5
+#089 Muk-Alola Poison Dark 2
+#090 Shellder Water 6
+#091 Cloyster Water Ice 3
+#092 Gastly Ghost Poison 6
+#093 Haunter Ghost Poison 5
+#094 Gengar Ghost Poison 1
+#095 Onix Rock Ground 6
+#096 Drowzee Psychic 6
+#097 Hypno Psychic 5
+#098 Krabby Water 6
+#099 Kingler Water 5
+#100 Voltorb Electric 6
+#101 Electrode Electric 5
+#102 Exeggcute Grass Psychic 6
+#103 Exeggutor Grass Psychic 5
+#103 Exeggutor-Alola Grass Dragon 5
+#104 Cubone Ground 6
+#105 Marowak Ground 5
+#105 Marowak-Alola Fire Ghost 2
+#106 Hitmonlee Fighting 4
+#107 Hitmonchan Fighting 4
+#108 Lickitung Normal 5
+#109 Koffing Poison 6
+#110 Weezing Poison 4
+#111 Rhyhorn Ground Rock 6
+#112 Rhydon Ground Rock 5
+#113 Chansey Normal 1
+#114 Tangela Grass 5
+#115 Kangaskhan Normal 5
+#116 Horsea Water 6
+#117 Seadra Water 6
+#118 Goldeen Water 6
+#119 Seaking Water 5
+#120 Staryu Water 6
+#121 Starmie Water Psychic 1
+#122 MrMime Psychic Fairy 5
+#123 Scyther Bug Flying 5
+#124 Jynx Ice Psychic 4
+#125 Electabuzz Electric 5
+#126 Magmar Fire 5
+#127 Pinsir Bug 5
+#128 Tauros Normal 5
+#129 Magikarp Water 6
+#130 Gyarados Water Flying 2
+#131 Lapras Water Ice 5
+#132 Ditto Normal 4
+#133 Eevee Normal 6
+#134 Vaporeon Water 3
+#135 Jolteon Electric 3
+#136 Flareon Fire 5
+#137 Porygon Normal 6
+#138 Omanyte Rock Water 6
+#139 Omastar Rock Water 4
+#140 Kabuto Rock Water 6
+#141 Kabutops Rock Water 3
+#142 Aerodactyl Rock Flying 3
+#143 Snorlax Normal 3
+#144 Articuno Ice Flying 5
+#145 Zapdos Electric Flying 1
+#146 Moltres Fire Flying 4
+#147 Dratini Dragon 6
+#148 Dragonair Dragon 5
+#149 Dragonite Dragon Flying 1
+#150 Mewtwo Psychic 0
+#151 Mew Psychic 1
+#152 Chikorita Grass 6
+#153 Bayleef Grass 6
+#154 Meganium Grass 5
+#155 Cyndaquil Fire 6
+#156 Quilava Fire 6
+#157 Typhlosion Fire 4
+#158 Totodile Water 6
+#159 Croconaw Water 6
+#160 Feraligatr Water 2
+#161 Sentret Normal 6
+#162 Furret Normal 5
+#163 Hoothoot Normal Flying 6
+#164 Noctowl Normal Flying 5
+#165 Ledyba Bug Flying 6
+#166 Ledian Bug Flying 5
+#167 Spinarak Bug Poison 6
+#168 Ariados Bug Poison 5
+#169 Crobat Poison Flying 3
+#170 Chinchou Water Electric 6
+#171 Lanturn Water Electric 5
+#172 Pichu Electric 6
+#173 Cleffa Fairy 6
+#174 Igglybuff Normal Fairy 6
+#175 Togepi Fairy 6
+#176 Togetic Fairy Flying 4
+#177 Natu Psychic Flying 6
+#178 Xatu Psychic Flying 5
+#179 Mareep Electric 6
+#180 Flaaffy Electric 6
+#181 Ampharos Electric 5
+#182 Bellossom Grass 5
+#183 Marill Water Fairy 6
+#184 Azumarill Water Fairy 1
+#185 Sudowoodo Rock 5
+#186 Politoed Water 2
+#187 Hoppip Grass Flying 6
+#188 Skiploom Grass Flying 6
+#189 Jumpluff Grass Flying 5
+#190 Aipom Normal 6
+#191 Sunkern Grass 6
+#192 Sunflora Grass 5
+#193 Yanma Bug Flying 6
+#194 Wooper Water Ground 6
+#195 Quagsire Water Ground 4
+#196 Espeon Psychic 3
+#197 Umbreon Dark 3
+#198 Murkrow Dark Flying 5
+#199 Slowking Water Psychic 3
+#200 Misdreavus Ghost 6
+#201 Unown Psychic 5
+#202 Wobbuffet Psychic 5
+#203 Girafarig Normal Psychic 5
+#204 Pineco Bug 6
+#205 Forretress Bug Steel 3
+#206 Dunsparce Normal 5
+#207 Gligar Ground Flying 4
+#208 Steelix Steel Ground 5
+#209 Snubbull Fairy 6
+#210 Granbull Fairy 4
+#211 Qwilfish Water Poison 4
+#212 Scizor Bug Steel 1
+#213 Shuckle Bug Rock 4
+#214 Heracross Bug Fighting 2
+#215 Sneasel Dark Ice 5
+#216 Teddiursa Normal 6
+#217 Ursaring Normal 5
+#218 Slugma Fire 6
+#219 Magcargo Fire Rock 5
+#220 Swinub Ice Ground 6
+#221 Piloswine Ice Ground 4
+#222 Corsola Water Rock 5
+#223 Remoraid Water 6
+#224 Octillery Water 5
+#225 Delibird Ice Flying 5
+#226 Mantine Water Flying 3
+#227 Skarmory Steel Flying 1
+#228 Houndour Dark Fire 6
+#229 Houndoom Dark Fire 4
+#230 Kingdra Water Dragon 3
+#231 Phanpy Ground 6
+#232 Donphan Ground 3
+#233 Porygon2 Normal 3
+#234 Stantler Normal 5
+#235 Smeargle Normal 3
+#236 Tyrogue Fighting 6
+#237 Hitmontop Fighting 3
+#238 Smoochum Ice Psychic 6
+#239 Elekid Electric 6
+#240 Magby Fire 6
+#241 Miltank Normal 4
+#242 Blissey Normal 1
+#243 Raikou Electric 1
+#244 Entei Fire 2
+#245 Suicune Water 2
+#246 Larvitar Rock Ground 6
+#247 Pupitar Rock Ground 6
+#248 Tyranitar Rock Dark 1
+#249 Lugia Psychic Flying 0
+#250 Ho-Oh Fire Flying 0
+#251 Celebi Psychic Grass 2
+#252 Treecko Grass 6
+#253 Grovyle Grass 6
+#254 Sceptile Grass 4
+#255 Torchic Fire 6
+#256 Combusken Fire Fighting 5
+#257 Blaziken Fire Fighting 4
+#258 Mudkip Water 6
+#259 Marshtomp Water Ground 6
+#260 Swampert Water Ground 3
+#261 Poochyena Dark 6
+#262 Mightyena Dark 5
+#263 Zigzagoon Normal 6
+#264 Linoone Normal 5
+#265 Wurmple Bug 6
+#266 Silcoon Bug 6
+#267 Beautifly Bug Flying 5
+#268 Cascoon Bug 6
+#269 Dustox Bug Poison 5
+#270 Lotad Water Grass 6
+#271 Lombre Water Grass 6
+#272 Ludicolo Water Grass 4
+#273 Seedot Grass 6
+#274 Nuzleaf Grass Dark 6
+#275 Shiftry Grass Dark 4
+#276 Taillow Normal Flying 6
+#277 Swellow Normal Flying 4
+#278 Wingull Water Flying 6
+#279 Pelipper Water Flying 2
+#280 Ralts Psychic Fairy 6
+#281 Kirlia Psychic Fairy 6
+#282 Gardevoir Psychic Fairy 3
+#283 Surskit Bug Water 6
+#284 Masquerain Bug Flying 3
+#285 Shroomish Grass 6
+#286 Breloom Grass Fighting 3
+#287 Slakoth Normal 6
+#288 Vigoroth Normal 5
+#289 Slaking Normal 5
+#290 Nincada Bug Ground 6
+#291 Ninjask Bug Flying 5
+#292 Shedinja Bug Ghost 4
+#293 Whismur Normal 6
+#294 Loudred Normal 6
+#295 Exploud Normal 4
+#296 Makuhita Fighting 6
+#297 Hariyama Fighting 4
+#298 Azurill Normal Fairy 6
+#299 Nosepass Rock 6
+#300 Skitty Normal 6
+#301 Delcatty Normal 5
+#302 Sableye Dark Ghost 3
+#303 Mawile Steel Fairy 5
+#304 Aron Steel Rock 5
+#305 Lairon Steel Rock 6
+#306 Aggron Steel Rock 4
+#307 Meditite Fighting Psychic 6
+#308 Medicham Fighting Psychic 3
+#309 Electrike Electric 6
+#310 Manectric Electric 4
+#311 Plusle Electric 5
+#312 Minun Electric 5
+#313 Volbeat Bug 5
+#314 Illumise Bug 5
+#315 Roselia Grass Poison 5
+#316 Gulpin Poison 6
+#317 Swalot Poison 5
+#318 Carvanha Water Dark 6
+#319 Sharpedo Water Dark 3
+#320 Wailmer Water 6
+#321 Wailord Water 5
+#322 Numel Fire Ground 6
+#323 Camerupt Fire Ground 6
+#324 Torkoal Fire 3
+#325 Spoink Psychic 6
+#326 Grumpig Psychic 5
+#327 Spinda Normal 5
+#328 Trapinch Ground 6
+#329 Vibrava Ground Dragon 6
+#330 Flygon Ground Dragon 3
+#331 Cacnea Grass 6
+#332 Cacturne Grass Dark 5
+#333 Swablu Normal Flying 6
+#334 Altaria Dragon Flying 5
+#335 Zangoose Normal 5
+#336 Seviper Poison 5
+#337 Lunatone Rock Psychic 5
+#338 Solrock Rock Psychic 5
+#339 Barboach Water Ground 6
+#340 Whiscash Water Ground 5
+#341 Corphish Water 6
+#342 Crawdaunt Water Dark 2
+#343 Baltoy Ground Psychic 6
+#344 Claydol Ground Psychic 5
+#345 Lileep Rock Grass 6
+#346 Cradily Rock Grass 4
+#347 Anorith Rock Bug 6
+#348 Armaldo Rock Bug 4
+#349 Feebas Water 6
+#350 Milotic Water 2
+#351 Castform Normal 5
+#352 Kecleon Normal 5
+#353 Shuppet Ghost 6
+#354 Banette Ghost 6
+#355 Duskull Ghost 6
+#356 Dusclops Ghost 4
+#357 Tropius Grass Flying 5
+#358 Chimecho Psychic 5
+#359 Absol Dark 4
+#360 Wynaut Psychic 6
+#361 Snorunt Ice 6
+#362 Glalie Ice 6
+#363 Spheal Ice Water 6
+#364 Sealeo Ice Water 6
+#365 Walrein Ice Water 5
+#366 Clamperl Water 6
+#367 Huntail Water 5
+#368 Gorebyss Water 5
+#369 Relicanth Water Rock 5
+#370 Luvdisc Water 5
+#371 Bagon Dragon 6
+#372 Shelgon Dragon 5
+#373 Salamence Dragon Flying 1
+#374 Beldum Steel Psychic 6
+#375 Metang Steel Psychic 5
+#376 Metagross Steel Psychic 3
+#377 Regirock Rock 4
+#378 Regice Ice 5
+#379 Registeel Steel 4
+#380 Latias Dragon Psychic 1
+#381 Latios Dragon Psychic 1
+#382 Kyogre Water 0
+#383 Groudon Ground 0
+#384 Rayquaza Dragon Flying 0
+#385 Jirachi Steel Psychic 1
+#386 Deoxys Psychic 6
+#386 Deoxys-Attack Psychic 0
+#386 Deoxys-Defense Psychic 0
+#386 Deoxys-Speed Psychic 0
+#387 Turtwig Grass 6
+#388 Grotle Grass 6
+#389 Torterra Grass Ground 5
+#390 Chimchar Fire 6
+#391 Monferno Fire Fighting 6
+#392 Infernape Fire Fighting 2
+#393 Piplup Water 6
+#394 Prinplup Water 5
+#395 Empoleon Water Steel 3
+#396 Starly Normal Flying 6
+#397 Staravia Normal Flying 6
+#398 Staraptor Normal Flying 2
+#399 Bidoof Normal 6
+#400 Bibarel Normal Water 5
+#401 Kricketot Bug 6
+#402 Kricketune Bug 5
+#403 Shinx Electric 6
+#404 Luxio Electric 6
+#405 Luxray Electric 5
+#406 Budew Grass Poison 6
+#407 Roserade Grass Poison 3
+#408 Cranidos Rock 6
+#409 Rampardos Rock 5
+#410 Shieldon Rock Steel 6
+#411 Bastiodon Rock Steel 5
+#412 Burmy-Plant Bug 6
+#412 Burmy-Sandy Bug 6
+#412 Burmy-Trash Bug 6
+#413 Wormadam-Plant Bug Grass 5
+#413 Wormadam-Sandy Bug Ground 5
+#413 Wormadam-Trash Bug Steel 5
+#414 Mothim Bug Flying 5
+#415 Combee Bug Flying 6
+#416 Vespiquen Bug Flying 5
+#417 Pachirisu Electric 5
+#418 Buizel Water 6
+#419 Floatzel Water 5
+#420 Cherubi Grass 6
+#421 Cherrim Grass 5
+#422 Shellos Water 6
+#423 Gastrodon Water Ground 3
+#424 Ambipom Normal 4
+#425 Drifloon Ghost Flying 6
+#426 Drifblim Ghost Flying 5
+#427 Buneary Normal 6
+#428 Lopunny Normal 5
+#429 Mismagius Ghost 4
+#430 Honchkrow Dark Flying 3
+#431 Glameow Normal 6
+#432 Purugly Normal 5
+#433 Chingling Psychic 6
+#434 Stunky Poison Dark 6
+#435 Skuntank Poison Dark 4
+#436 Bronzor Steel Psychic 6
+#437 Bronzong Steel Psychic 4
+#438 Bonsly Rock 6
+#439 MimeJr Psychic Fairy 6
+#440 Happiny Normal 6
+#441 Chatot Normal Flying 5
+#442 Spiritomb Ghost Dark 4
+#443 Gible Dragon Ground 6
+#444 Gabite Dragon Ground 5
+#445 Garchomp Dragon Ground 1
+#446 Munchlax Normal 6
+#447 Riolu Fighting 6
+#448 Lucario Fighting Steel 2
+#449 Hippopotas Ground 6
+#450 Hippowdon Ground 1
+#451 Skorupi Poison Bug 6
+#452 Drapion Poison Dark 4
+#453 Croagunk Poison Fighting 6
+#454 Toxicroak Poison Fighting 3
+#455 Carnivine Grass 5
+#456 Finneon Water 6
+#457 Lumineon Water 5
+#458 Mantyke Water Flying 6
+#459 Snover Grass Ice 6
+#460 Abomasnow Grass Ice 4
+#461 Weavile Dark Ice 1
+#462 Magnezone Electric Steel 2
+#463 Lickilicky Normal 5
+#464 Rhyperior Ground Rock 4
+#465 Tangrowth Grass 3
+#466 Electivire Electric 5
+#467 Magmortar Fire 4
+#468 Togekiss Fairy Flying 2
+#469 Yanmega Bug Flying 4
+#470 Leafeon Grass 5
+#471 Glaceon Ice 6
+#472 Gliscor Ground Flying 2
+#473 Mamoswine Ice Ground 2
+#474 Porygon-Z Normal 3
+#475 Gallade Psychic Fighting 4
+#476 Probopass Rock Steel 5
+#477 Dusknoir Ghost 4
+#478 Froslass Ice Ghost 4
+#479 Rotom Electric Ghost 5
+#479 Rotom-Heat Electric Fire 3
+#479 Rotom-Wash Electric Water 2
+#479 Rotom-Frost Electric Ice 5
+#479 Rotom-Fan Electric Flying 5
+#479 Rotom-Mow Electric Grass 4
+#480 Uxie Psychic 3
+#481 Mesprit Psychic 4
+#482 Azelf Psychic 2
+#483 Dialga Steel Dragon 0
+#484 Palkia Water Dragon 0
+#485 Heatran Fire Steel 1
+#486 Regigigas Normal 4
+#487 Giratina Ghost Dragon 0
+#487 Giratina-Origin Ghost Dragon 0
+#488 Cresselia Psychic 2
+#489 Phione Water 5
+#490 Manaphy Water 1
+#491 Darkrai Dark 0
+#492 Shaymin Grass 3
+#492 Shaymin-Sky Grass Flying 0
+#493 Arceus Normal 0
+#494 Victini Psychic Fire 1
+#495 Snivy Grass 6
+#496 Servine Grass 5
+#497 Serperior Grass 2
+#498 Tepig Fire 6
+#499 Pignite Fire Fighting 6
+#500 Emboar Fire Fighting 3
+#501 Oshawott Water 6
+#502 Dewott Water 6
+#503 Samurott Water 5
+#504 Patrat Normal 6
+#505 Watchog Normal 5
+#506 Lillipup Normal 6
+#507 Herdier Normal 6
+#508 Stoutland Normal 4
+#509 Purrloin Dark 6
+#510 Liepard Dark 4
+#511 Pansage Grass 6
+#512 Simisage Grass 5
+#513 Pansear Fire 6
+#514 Simisear Fire 5
+#515 Panpour Water 6
+#516 Simipour Water 5
+#517 Munna Psychic 6
+#518 Musharna Psychic 5
+#519 Pidove Normal Flying 6
+#520 Tranquill Normal Flying 6
+#521 Unfezant Normal Flying 5
+#522 Blitzle Electric 6
+#523 Zebstrika Electric 5
+#524 Roggenrola Rock 6
+#525 Boldore Rock 6
+#526 Gigalith Rock 3
+#527 Woobat Psychic Flying 6
+#528 Swoobat Psychic Flying 5
+#529 Drilbur Ground 6
+#530 Excadrill Ground Steel 1
+#531 Audino Normal 5
+#532 Timburr Fighting 6
+#533 Gurdurr Fighting 5
+#534 Conkeldurr Fighting 1
+#535 Tympole Water 6
+#536 Palpitoad Water Ground 6
+#537 Seismitoad Water Ground 4
+#538 Throh Fighting 5
+#539 Sawk Fighting 5
+#540 Sewaddle Bug Grass 6
+#541 Swadloon Bug Grass 6
+#542 Leavanny Bug Grass 5
+#543 Venipede Bug Poison 6
+#544 Whirlipede Bug Poison 6
+#545 Scolipede Bug Poison 1
+#546 Cottonee Grass Fairy 6
+#547 Whimsicott Grass Fairy 3
+#548 Petilil Grass 6
+#549 Lilligant Grass 5
+#550 Basculin Water 4
+#551 Sandile Ground Dark 6
+#552 Krokorok Ground Dark 6
+#553 Krookodile Ground Dark 3
+#554 Darumaka Fire 6
+#555 Darmanitan Fire 3
+#556 Maractus Grass 5
+#557 Dwebble Bug Rock 6
+#558 Crustle Bug Rock 5
+#559 Scraggy Dark Fighting 6
+#560 Scrafty Dark Fighting 3
+#561 Sigilyph Psychic Flying 4
+#562 Yamask Ghost 6
+#563 Cofagrigus Ghost 4
+#564 Tirtouga Water Rock 6
+#565 Carracosta Water Rock 5
+#566 Archen Rock Flying 6
+#567 Archeops Rock Flying 4
+#568 Trubbish Poison 6
+#569 Garbodor Poison 4
+#570 Zorua Dark 6
+#571 Zoroark Dark 4
+#572 Minccino Normal 6
+#573 Cinccino Normal 4
+#574 Gothita Psychic 6
+#575 Gothorita Psychic 5
+#576 Gothitelle Psychic 4
+#577 Solosis Psychic 6
+#578 Duosion Psychic 5
+#579 Reuniclus Psychic 2
+#580 Ducklett Water Flying 6
+#581 Swanna Water Flying 5
+#582 Vanillite Ice 6
+#583 Vanillish Ice 6
+#584 Vanilluxe Ice 5
+#585 Deerling Normal Grass 6
+#586 Sawsbuck Normal Grass 4
+#587 Emolga Electric Flying 5
+#588 Karrablast Bug 6
+#589 Escavalier Bug Steel 4
+#590 Foongus Grass Poison 6
+#591 Amoonguss Grass Poison 2
+#592 Frillish Water Ghost 6
+#593 Jellicent Water Ghost 4
+#594 Alomomola Water 4
+#595 Joltik Bug Electric 6
+#596 Galvantula Bug Electric 3
+#597 Ferroseed Grass Steel 5
+#598 Ferrothorn Grass Steel 2
+#599 Klink Steel 6
+#600 Klang Steel 6
+#601 Klinklang Steel 5
+#602 Tynamo Electric 6
+#603 Eelektrik Electric 6
+#604 Eelektross Electric 3
+#605 Elgyem Psychic 6
+#606 Beheeyem Psychic 5
+#607 Litwick Ghost Fire 6
+#608 Lampent Ghost Fire 5
+#609 Chandelure Ghost Fire 2
+#610 Axew Dragon 6
+#611 Fraxure Dragon 5
+#612 Haxorus Dragon 2
+#613 Cubchoo Ice 6
+#614 Beartic Ice 5
+#615 Cryogonal Ice 4
+#616 Shelmet Bug 6
+#617 Accelgor Bug 4
+#618 Stunfisk Ground Electric 5
+#619 Mienfoo Fighting 6
+#620 Mienshao Fighting 3
+#621 Druddigon Dragon 4
+#622 Golett Ground Ghost 6
+#623 Golurk Ground Ghost 5
+#624 Pawniard Dark Steel 6
+#625 Bisharp Dark Steel 1
+#626 Bouffalant Normal 5
+#627 Rufflet Normal Flying 6
+#628 Braviary Normal Flying 4
+#629 Vullaby Dark Flying 6
+#630 Mandibuzz Dark Flying 2
+#631 Heatmor Fire 5
+#632 Durant Bug Steel 4
+#633 Deino Dark Dragon 6
+#634 Zweilous Dark Dragon 6
+#635 Hydreigon Dark Dragon 1
+#636 Larvesta Bug Fire 6
+#637 Volcarona Bug Fire 2
+#638 Cobalion Steel Fighting 3
+#639 Terrakion Rock Fighting 1
+#640 Virizion Grass Fighting 3
+#641 Tornadus-Incarnate Flying 2
+#641 Tornadus-Therian Flying 1
+#642 Thundurus-Incarnate Electric Flying 1
+#642 Thundurus-Therian Electric Flying 1
+#643 Reshiram Dragon Fire 0
+#644 Zekrom Dragon Electric 0
+#645 Landorus-Incarnate Ground Flying 1
+#645 Landorus-Therian Ground Flying 1
+#646 Kyurem Dragon Ice 3
+#646 Kyurem-Black Dragon Ice 1
+#646 Kyurem-White Dragon Ice 0
+#647 Keldeo Water Fighting 1
+#648 Meloetta Normal Psychic 3
+#649 Genesect Bug Steel 0
+#650 Chespin Grass 6
+#651 Quilladin Grass 6
+#652 Chesnaught Grass Fighting 3
+#653 Fennekin Fire 6
+#654 Braixen Fire 6
+#655 Delphox Fire Psychic 4
+#656 Froakie Water 6
+#657 Frogadier Water 5
+#658 Greninja Water Dark 3
+#659 Bunnelby Normal 6
+#660 Diggersby Normal Ground 2
+#661 Fletchling Normal Flying 6
+#662 Fletchinder Fire Flying 4
+#663 Talonflame Fire Flying 2
+#664 Scatterbug Bug 6
+#665 Spewpa Bug 6
+#666 Vivillon Bug Flying 5
+#667 Litleo Fire Normal 6
+#668 Pyroar Fire Normal 5
+#669 Flabebe Fairy 6
+#670 Floette Fairy 6
+#671 Florges Fairy 2
+#672 Skiddo Grass 6
+#673 Gogoat Grass 5
+#674 Pancham Fighting 6
+#675 Pangoro Fighting Dark 4
+#676 Furfrou Normal 5
+#677 Espurr Psychic 6
+#678 Meowstic Psychic 5
+#679 Honedge Steel Ghost 6
+#680 Doublade Steel Ghost 3
+#681 Aegislash Steel Ghost 0
+#682 Spritzee Fairy 6
+#683 Aromatisse Fairy 4
+#684 Swirlix Fairy 6
+#685 Slurpuff Fairy 4
+#686 Inkay Dark Psychic 6
+#687 Malamar Dark Psychic 5
+#688 Binacle Rock Water 6
+#689 Barbaracle Rock Water 5
+#690 Skrelp Poison Water 6
+#691 Dragalge Poison Dragon 3
+#692 Clauncher Water 6
+#693 Clawitzer Water 4
+#694 Helioptile Electric Normal 6
+#695 Heliolisk Electric Normal 3
+#696 Tyrunt Rock Dragon 6
+#697 Tyrantrum Rock Dragon 3
+#698 Amaura Rock Ice 6
+#699 Aurorus Rock Ice 5
+#700 Sylveon Fairy 2
+#701 Hawlucha Fighting Flying 2
+#702 Dedenne Electric Fairy 5
+#703 Carbink Rock Fairy 5
+#704 Goomy Dragon 6
+#705 Sliggoo Dragon 5
+#706 Goodra Dragon 2
+#707 Klefki Steel Fairy 2
+#708 Phantump Ghost Grass 6
+#709 Trevenant Ghost Grass 4
+#710 Pumpkaboo Ghost Grass 6
+#711 Gourgeist Ghost Grass 5
+#712 Bergmite Ice 6
+#713 Avalugg Ice 5
+#714 Noibat Flying Dragon 6
+#715 Noivern Flying Dragon 4
+#716 Xerneas Fairy 0
+#717 Yveltal Dark Flying 0
+#718 Zygarde-10 Dragon Ground 3
+#718 Zygarde-50 Dragon Ground 2
+#719 Diancie Rock Fairy 4
+#720 Hoopa Psychic Ghost 3
+#720 Hoopa-Unbound Psychic Dark 0
+#721 Volcanion Fire Water 1
+#722 Rowlet Grass Flying 6
+#723 Dartrix Grass Flying 6
+#724 Decidueye Grass Ghost 3
+#725 Litten Fire 6
+#726 Torracat Fire 6
+#727 Incineroar Fire Dark 3
+#728 Popplio Water 6
+#729 Brionne Water 6
+#730 Primarina Water Fairy 3
+#731 Pikipek Normal Flying 6
+#732 Trumbeak Normal Flying 6
+#733 Toucannon Normal Flying 4
+#734 Yungoos Normal 6
+#735 Gumshoos Normal 5
+#736 Grubbin Bug 6
+#737 Charjabug Bug Electric 6
+#738 Vikavolt Bug Electric 4
+#739 Crabrawler Fighting 6
+#740 Crabominable Fighting Ice 4
+#741 Oricorio Flying 4
+#742 Cutiefly Bug Fairy 6
+#743 Ribombee Bug Fairy 4
+#744 Rockruff Rock 6
+#745 Lycanroc Rock 2
+#746 Wishiwashi Water 4
+#747 Mareanie Poison Water 6
+#748 Toxapex Poison Water 1
+#749 Mudbray Ground 6
+#750 Mudsdale Ground 3
+#751 Dewpider Water Bug 6
+#752 Araquanid Water Bug 2
+#753 Fomantis Grass 6
+#754 Lurantis Grass 4
+#755 Morelull Grass Fairy 6
+#756 Shiinotic Grass Fairy 4
+#757 Salandit Poison Fire 6
+#758 Salazzle Poison Fire 3
+#759 Stufful Normal Fighting 6
+#760 Bewear Normal Fighting 3
+#761 Bounsweet Grass 6
+#762 Steenee Grass 6
+#763 Tsareena Grass 3
+#764 Comfey Fairy 3
+#765 Oranguru Normal Psychic 4
+#766 Passimian Fighting 4
+#767 Wimpod Bug Water 6
+#768 Golisopod Bug Water 3
+#769 Sandygast Ghost Ground 6
+#770 Palossand Ghost Ground 3
+#771 Pyukumuku Water 3
+#772 TypeNull Normal 4
+#773 Silvally Normal 1
+#774 Minior Rock Flying 2
+#775 Komala Normal 4
+#776 Turtonator Fire Dragon 4
+#777 Togedemaru Electric Steel 5
+#778 Mimikyu Ghost Fairy 2
+#779 Bruxish Water Psychic 3
+#780 Drampa Normal Dragon 3
+#781 Dhelmise Ghost Grass 2
+#782 Jangmo-o Dragon 6
+#783 Hakamo-o Dragon Fighting 6
+#784 Kommo-o Dragon Fighting 6
+#785 TapuKoko Electric Fairy 1
+#786 TapuLele Psychic Fairy 0
+#787 TapuBulu Grass Fairy 1
+#788 TapuFini Water Fairy 1
+#789 Cosmog Psychic 6
+#790 Cosmoem Psychic 6
+#791 Solgaleo Psychic Steel 0
+#792 Lunala Psychic Ghost 0
+#793 Nihilego Rock Poison 1
+#794 Buzzwole Bug Fighting 1
+#795 Pheromosa Bug Fighting 0
+#796 Xurkitree Electric 1
+#797 Celesteela Steel Flying 1
+#798 Kartana Grass Steel 1
+#799 Guzzlord Dark Dragon 2
+#800 Necrozma Psychic 0
+#801 Magearna Steel Fairy 1
+#802 Marshadow Fighting Ghost 0
