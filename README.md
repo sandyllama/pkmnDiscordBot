@@ -23,7 +23,7 @@ To-Do:
 
 --------------------------------------------------------------------------------------------------
 
-Setup
+Setup:
 
 To set up the bot, you need to register a new bot on the Discord app page, get a token, etc. There are plenty of guides for this available. The token will be used to connect the bot to your server. You must edit pkmnDraftBot.py with your token -- the location is marked clearly within the source.
 
