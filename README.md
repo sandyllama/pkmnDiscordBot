@@ -4,6 +4,8 @@ Discord Bot used to automate and manage competitive Pokémon Draft Leagues.
 
 Tested on Python 3.5+
 
+--------------------------------------------------------------------------------------------------
+
 Features:
 - Can be used to manage an arbitrary number of players within an 11 slot roster GBA-style snake draft.
 - Allows for queuing of drafts ahead of time.
