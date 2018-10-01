@@ -22,7 +22,7 @@ IMPLEMENTED_COMMANDS = ["!help", "!mystery", "!register", "!draft", "!undraft", 
 MESSAGE_BUFFER = asyncio.Queue()
 
 # User needs to put their token here!
-token = 'MzE1MjM1NDE1OTYxMzcwNjM1.DlZNyg.xCTGYeTvyVBbRoQGu0uBCOS5JE0'
+token = 'TOKEN HERE!'
 client = discord.Client()
 
 
