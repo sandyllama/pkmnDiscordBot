@@ -881,7 +881,7 @@ def command_recommendation(msg):
                             numberOfEachType[eachType] += 1
 
                         # check to see if it's a weather team
-                        if actualPokemon["name"] in ["Torkoal", "Ninetails"]:
+                        if actualPokemon["name"] in ["Torkoal", "Ninetails", "Mega-Charizard-Y"]:
                             sunTeam = True
                         if actualPokemon["name"] in ["Pelipper", "Politoed"]:
                             rainTeam = True
