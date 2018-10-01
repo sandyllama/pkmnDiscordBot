@@ -17,7 +17,7 @@ import copy
 
 # GLOBALS
 MAIN_DATA = {}
-IMPLEMENTED_COMMANDS = ["!help", "!mystery", "!register", "!draft", "!undraft", "!start_draft", "!all_teams", "!my_team", "!available", "!search", "!tiers", "!search_teams", "!supply", "!recommendation"]
+IMPLEMENTED_COMMANDS = ["!help", "!mystery", "!register", "!draft", "!undraft", "!start_draft", "!all_teams", "!my_team", "!available", "!search", "!tiers", "!search_teams", "!supply", "!recommendation", "!export"]
 
 MESSAGE_BUFFER = asyncio.Queue()
 
@@ -1390,7 +1390,44 @@ def command_recommendation(msg):
             response += "```"
             return response
 
+# get info about pokemon
+def command_export():
+    global MAIN_DATA
 
+    response = ""
+
+    for iterUser in MAIN_DATA["users"]:
+        if iterUser["discord_id"] == msg.author.id:
+            
+
+            response = response + iterUser["discord_name"] + " | **" + iterUser["teamName"] + "** [" + iterUser["teamAbbreviation"] + "]" + """
+
+Paste in Showdown's importer: 
+"""
+
+#Pokemon @ item
+#Ability: ability
+#EVs: number stat / number stat / number stat
+#nature Nature
+#- move
+#- move
+#- move
+#- move
+
+            teamMateCounter = 1
+            for entry in iterUser["teamMembers"]:
+                response = response + entry + """
+"""
+                response = response + "@item"
+                response = response + "Ability: ability"
+                response = response + "EVs: 0 / 0 / 0"
+                response = response + "- move"
+                response = response + "- move"
+                response = response + "- move"
+                response = response + "- move"
+                teamMateCounter +=1
+    
+    return response
 
 def draft_iterator():
     global MAIN_DATA
@@ -1715,6 +1752,10 @@ e.g. !search Normal
         response = command_recommendation(msg)
         return response
 
+    #TODO: !export to respond with team in Showdown text format
+    if command == "!export":
+        response = command_recommendation(msg)
+        return response
 
 
     # reject users who are not administrators
