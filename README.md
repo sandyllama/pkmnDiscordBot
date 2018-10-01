@@ -2,7 +2,7 @@
 
 Discord Bot used to automate and manage competitive Pokémon Draft Leagues.
 
-Tested on Python 3.5+
+Tested on Python 3.5, 3.6
 
 --------------------------------------------------------------------------------------------------
 
@@ -17,9 +17,10 @@ Features:
 
 --------------------------------------------------------------------------------------------------
 
-To-Do:
-- Add support for Mega Evolutions.
+TODO:
 - Add support for Tiered and Point drafts.
+- Bust out configuration into its own file to make setup easier.
+- 
 
 --------------------------------------------------------------------------------------------------
 
