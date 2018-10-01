@@ -17,14 +17,13 @@ import copy
 
 # GLOBALS
 MAIN_DATA = {}
-IMPLEMENTED_COMMANDS = ["!help", "!mystery", "!register", "!draft", "!undraft", "!start_draft", "!all_teams", "!my_team", "!available", "!search", "!tiers", "!search_teams", "!supply", "!recommendation"]
+IMPLEMENTED_COMMANDS = ["!help", "!mystery", "!register", "!draft", "!undraft", "!start_draft", "!all_teams", "!my_team", "!available", "!search", "!tiers", "!search_teams", "!supply", "!recommendation", "!search_mega"]
 
 MESSAGE_BUFFER = asyncio.Queue()
 
 # User needs to put their token here!
-token = 'TOKEN_HERE'
+token = 'MzE1MjM1NDE1OTYxMzcwNjM1.DlZNyg.xCTGYeTvyVBbRoQGu0uBCOS5JE0'
 client = discord.Client()
-
 
 
 
@@ -78,22 +77,23 @@ def attemptDataFileLoad():
             newPokemonDict = {}
             newPokemonDict["name"] = splitline[1]
             newPokemonDict["type"] = []
-            if len(splitline) == 5:
+            if len(splitline) == 6:
                 newPokemonDict["type"].append(splitline[2])
                 newPokemonDict["type"].append(splitline[3])
-            elif len(splitline) == 4:
+            elif len(splitline) == 5:
                 newPokemonDict["type"].append(splitline[2])
             else:
                 print("ERROR: Pokemon list file is broken.")
                 exit()
-            newPokemonDict["tier"] = splitline[-1]
+
+            newPokemonDict["tier"] = splitline[-2]
             if newPokemonDict["tier"] == "0":
                 newPokemonDict["legal"] = False
             else:
                 newPokemonDict["legal"] = True
+            newPokemonDict["mega"] = splitline[-1]
             newPokemonDict["owner"] = None
             MAIN_DATA["freePokemon"].append(newPokemonDict)
-
         writeDataFile()
         loadDataFile()
 
@@ -162,6 +162,7 @@ e.g. !register The Miami Donphans MID"""
     newUser["teamMembers"] = []
     newUser["draftList"] = []
     newUser["zCaptain"] = None
+    newUser["draftedMega"] = False
 
     MAIN_DATA["users"].append(newUser)
 
@@ -178,18 +179,11 @@ Welcome to the Appokelachian League. Happy battling!
 def admin_command_start_draft(msg):
     global MAIN_DATA
 
-    # username
-    # print(str(msg.author.id))
-    # print(str(msg.author.name))
-    # print(str(msg.author.discriminator))
-
     # command
     command = str(msg.content).split(' ', 1)[0].strip()
-    # print(command)
 
     # args
     args = " ".join(str(msg.content).split(' ', 1)[1:])
-    # print(args)
     
     # if the draft has already finished, this command should be rejected
     if MAIN_DATA["draftFinished"] == True:
@@ -200,9 +194,6 @@ def admin_command_start_draft(msg):
     if MAIN_DATA["draftStarted"] == True:
         response = ("ERROR: The draft has already been started.")
         return response
-
-
-
 
     # MAIN_DATA will hold information about the draft
     MAIN_DATA["draftStarted"] = True
@@ -240,11 +231,6 @@ The draft order is:
 def command_draft(msg):
     global MAIN_DATA
 
-    # username
-    # print(str(msg.author.id))
-    # print(str(msg.author.name))
-    # print(str(msg.author.discriminator))
-
     # command
     command = str(msg.content).split(' ', 1)[0].strip()
     # print(command)
@@ -264,7 +250,7 @@ def command_draft(msg):
         if tempUser["discord_id"] == str(msg.author.id):
             thisUser = tempUser
 
-    if len( thisUser["draftList"]) >= 30:
+    if len( thisUser["draftList"]) >= 21:
         response = ("ERROR: Your draft list is too long. Please remove Pokemon before trying to draft more.")
         return response
 
@@ -284,6 +270,9 @@ def command_draft(msg):
                 return response
             else:
                 if (pokemon["legal"] == True):
+                    if (pokemon["mega"] == "1" and thisUser["draftedMega"] == True):
+                        response = "You can't draft a second Mega!"
+                        return response
                     for tempUser in MAIN_DATA["users"]:
                         if tempUser["discord_id"] == str(msg.author.id):
                             if pokemon["name"] not in tempUser["draftList"]:
@@ -312,11 +301,6 @@ def command_draft(msg):
 # remove a pokemon from draft list
 def command_undraft(msg):
     global MAIN_DATA
-
-    # username
-    # print(str(msg.author.id))
-    # print(str(msg.author.name))
-    # print(str(msg.author.discriminator))
 
     # command
     command = str(msg.content).split(' ', 1)[0].strip()
@@ -348,7 +332,6 @@ def command_undraft(msg):
     fixed_args = fixed_args.replace(".", "")
     fixed_args = fixed_args.replace(":", "")
     fixed_args = fixed_args.replace("'", "")
-
 
 
     # Check to see they're deleting something that exists
@@ -395,7 +378,6 @@ def command_undraft(msg):
 
     response = ("ERROR: [" + args +"] could not be removed from your list. **Please report this error!**")
     return response
-
 
 
 
@@ -459,12 +441,7 @@ def command_search_teams(msg):
     # lookup
     for iterUser in MAIN_DATA["users"]:
         if iterUser["teamAbbreviation"] == abbreviation:
-
-            # print(iterUser["teamAbbreviation"])
-            # print(abbreviation)
-
             response = ""
-
             response = response + iterUser["discord_name"] + " | **" + iterUser["teamName"] + "** [" + iterUser["teamAbbreviation"] + "]" + """
 
 Team Members:
@@ -491,9 +468,7 @@ def command_my_team(msg):
     response = ""
 
     for iterUser in MAIN_DATA["users"]:
-        if iterUser["discord_id"] == msg.author.id:
-            
-
+        if iterUser["discord_id"] == msg.author.id:        
             response = response + iterUser["discord_name"] + " | **" + iterUser["teamName"] + "** [" + iterUser["teamAbbreviation"] + "]" + """
 
 Team Members: 
@@ -503,7 +478,6 @@ Team Members:
                 response = response + "**" + str(teamMateCounter) + ")** " + entry + """
 """
                 teamMateCounter +=1
-
             response = response + """
 Draft List:
 """
@@ -511,8 +485,7 @@ Draft List:
             for entry in iterUser["draftList"]:
                 response = response + "**" + str(teamMateCounter) + ")** " + entry + """
 """
-                teamMateCounter +=1
-    
+                teamMateCounter +=1    
     return response
 
 
@@ -547,12 +520,28 @@ def command_search(msg):
     response = "Pokemon with type: **" + typeToSearch + "**" + """
 
 """
+
+    response = response + "*Mega*" + ":" + """
+"""
+    
+    for pokemon in tempPokemonList:
+        if (typeToSearch in pokemon["type"]) and (pokemon["tier"] != "0") and (pokemon["mega"] == "1"):
+            if pokemon["owner"] is not None:
+                response = response + "~~" + pokemon["name"] + "~~" + """
+"""
+            else:
+                response = response + "**" + pokemon["name"] + "**" + """
+"""        
+    response += """
+"""
+
+
     for specifiedTier in ["1","2","3","4","5"]:
         response = response + "*" + specifiedTier + "*" + ":" + """
 """
         
         for pokemon in tempPokemonList:
-            if (typeToSearch in pokemon["type"]) and (pokemon["tier"] == specifiedTier):
+            if (typeToSearch in pokemon["type"]) and (pokemon["tier"] == specifiedTier) and (pokemon["mega"] == "0"):
                 if pokemon["owner"] is not None:
                     response = response + "~~" + pokemon["name"] + "~~" + """
 """
@@ -565,26 +554,33 @@ def command_search(msg):
 
 
 # get info about pokemon
-def command_tiers(msg):
+def command_search_mega(msg):
     global MAIN_DATA
 
-    # args
-    # args = " ".join(str(msg.content).split(' ', 1)[1:])
+    tempPokemonList = copy.deepcopy(MAIN_DATA["freePokemon"])
+    tempPokemonList.sort(key=operator.itemgetter('tier','name'))
 
-    # Pokemon name changed to lowercase, whitespace and misc chars stripped
-    # fixed_args = args.lower()
-    # fixed_args = "".join(fixed_args.split())
-    # fixed_args = fixed_args.replace(".", "")
-    # fixed_args = fixed_args.replace(":", "")
-    # fixed_args = fixed_args.replace("'", "")
+    response = ""
 
-    # typeToSearch = str(msg.content).split(' ', 1)[1].strip()
-    # typeToSearch = typeToSearch.lower()
-    # typeToSearch = "".join(typeToSearch.split())
-    # typeToSearch = typeToSearch.replace(".", "")
-    # typeToSearch = typeToSearch.replace(":", "")
-    # typeToSearch = typeToSearch.replace("'", "")
-    # typeToSearch = typeToSearch.capitalize()
+    for specifiedTier in ["1","2","3"]:
+        response = response + "*" + specifiedTier + "*" + ":" + """
+"""
+        
+        for pokemon in tempPokemonList:
+            if (pokemon["tier"] == specifiedTier) and (pokemon["mega"] == "1"):
+                if pokemon["owner"] is not None:
+                    response = response + "~~" + pokemon["name"] + "~~" + """
+"""
+                else:
+                    response = response + "**" + pokemon["name"] + "**" + """
+"""        
+        response += """
+"""
+    return response
+
+# get info about pokemon
+def command_tiers(msg):
+    global MAIN_DATA
 
     tempPokemonList = copy.deepcopy(MAIN_DATA["freePokemon"])
     tempPokemonList.sort(key=operator.itemgetter('tier','name'))
@@ -730,7 +726,6 @@ def command_recommendation(msg):
 
     # command
     command = str(msg.content).split(' ', 1)[0].strip()
-    # print(command)
 
     # args
     args = " ".join(str(msg.content).split(' ', 1)[1:])
@@ -941,26 +936,6 @@ def command_recommendation(msg):
                                 teamResistanceScores[eachType] += 2.5
 
 
-            # print("Normal:  " + str(teamResistanceScores["Normal"]))
-            # print("Fighting:  " + str(teamResistanceScores["Fighting"]))
-            # print("Flying:  " + str(teamResistanceScores["Flying"]))
-            # print("Poison:  " + str(teamResistanceScores["Poison"]))
-            # print("Ground:  " + str(teamResistanceScores["Ground"]))
-            # print("Rock:  " + str(teamResistanceScores["Rock"]))
-            # print("Bug:  " + str(teamResistanceScores["Bug"]))
-            # print("Ghost:  " + str(teamResistanceScores["Ghost"]))
-            # print("Steel:  " + str(teamResistanceScores["Steel"]))
-            # print("Fire:  " + str(teamResistanceScores["Fire"]))
-            # print("Water:  " + str(teamResistanceScores["Water"]))
-            # print("Grass:  " + str(teamResistanceScores["Grass"]))
-            # print("Electric:  " + str(teamResistanceScores["Electric"]))
-            # print("Psychic:  " + str(teamResistanceScores["Psychic"]))
-            # print("Ice:  " + str(teamResistanceScores["Ice"]))
-            # print("Dragon:  " + str(teamResistanceScores["Dragon"]))
-            # print("Dark:  " + str(teamResistanceScores["Dark"]))
-            # print("Fairy:  " + str(teamResistanceScores["Fairy"]))
-
-
             # declare an overall team resistance score based on number of exploitable weaknesses
             currentOverallTeamResistanceScore = 0.0
 
@@ -1081,13 +1056,8 @@ def command_recommendation(msg):
 
                 sandTypeFlag = False
                 dualType = False
-
                 if len(pokemon["type"]) == 2:
                     dualType = True
-                    # print(pokemon["name"])
-                else:
-                    # print(pokemon["name"] + " SINGLE")
-                    pass
 
 
                 # Reward unique type additions to give more offensive threat
@@ -1312,56 +1282,7 @@ def command_recommendation(msg):
                     else:
                         newOverallTeamResistanceScore += modifiedResistanceScores["Fairy"]
 
-
                     positiveDifference = newOverallTeamResistanceScore - currentOverallTeamResistanceScore
-
-
-                    # print()
-
-                    # print("Normal:  " + str(teamResistanceScores["Normal"]))
-                    # print("Fighting:  " + str(teamResistanceScores["Fighting"]))
-                    # print("Flying:  " + str(teamResistanceScores["Flying"]))
-                    # print("Poison:  " + str(teamResistanceScores["Poison"]))
-                    # print("Ground:  " + str(teamResistanceScores["Ground"]))
-                    # print("Rock:  " + str(teamResistanceScores["Rock"]))
-                    # print("Bug:  " + str(teamResistanceScores["Bug"]))
-                    # print("Ghost:  " + str(teamResistanceScores["Ghost"]))
-                    # print("Steel:  " + str(teamResistanceScores["Steel"]))
-                    # print("Fire:  " + str(teamResistanceScores["Fire"]))
-                    # print("Water:  " + str(teamResistanceScores["Water"]))
-                    # print("Grass:  " + str(teamResistanceScores["Grass"]))
-                    # print("Electric:  " + str(teamResistanceScores["Electric"]))
-                    # print("Psychic:  " + str(teamResistanceScores["Psychic"]))
-                    # print("Ice:  " + str(teamResistanceScores["Ice"]))
-                    # print("Dragon:  " + str(teamResistanceScores["Dragon"]))
-                    # print("Dark:  " + str(teamResistanceScores["Dark"]))
-                    # print("Fairy:  " + str(teamResistanceScores["Fairy"]))
-                    # print("CURRENT SCORE:  " + str(currentOverallTeamResistanceScore))
-                    # print()
-
-                    # print("Normal:  " + str(modifiedResistanceScores["Normal"]))
-                    # print("Fighting:  " + str(modifiedResistanceScores["Fighting"]))
-                    # print("Flying:  " + str(modifiedResistanceScores["Flying"]))
-                    # print("Poison:  " + str(modifiedResistanceScores["Poison"]))
-                    # print("Ground:  " + str(modifiedResistanceScores["Ground"]))
-                    # print("Rock:  " + str(modifiedResistanceScores["Rock"]))
-                    # print("Bug:  " + str(modifiedResistanceScores["Bug"]))
-                    # print("Ghost:  " + str(modifiedResistanceScores["Ghost"]))
-                    # print("Steel:  " + str(modifiedResistanceScores["Steel"]))
-                    # print("Fire:  " + str(modifiedResistanceScores["Fire"]))
-                    # print("Water:  " + str(modifiedResistanceScores["Water"]))
-                    # print("Grass:  " + str(modifiedResistanceScores["Grass"]))
-                    # print("Electric:  " + str(modifiedResistanceScores["Electric"]))
-                    # print("Psychic:  " + str(modifiedResistanceScores["Psychic"]))
-                    # print("Ice:  " + str(modifiedResistanceScores["Ice"]))
-                    # print("Dragon:  " + str(modifiedResistanceScores["Dragon"]))
-                    # print("Dark:  " + str(modifiedResistanceScores["Dark"]))
-                    # print("Fairy:  " + str(modifiedResistanceScores["Fairy"]))
-                    # print("NEW SCORE:  " + str(newOverallTeamResistanceScore))
-
-                    # print()
-                    # print(pokemon["name"])
-                    # print(positiveDifference)
 
                     pokemon["score"] += (positiveDifference / 8.0)
 
@@ -1398,11 +1319,6 @@ def draft_iterator():
     draftOccuredFlag = False
 
     responseList = []
-    # responseDict = {}
-    # responseDict["id"] = "205108954873856009"
-    # responseDict["responseBody"] = "ERROR" 
-
-
 
     # get the id of the current drafter
     currentDrafterID = MAIN_DATA["draftOrder"][MAIN_DATA["draftCurrentPosition"]]
@@ -1425,9 +1341,15 @@ def draft_iterator():
                         if str(pokemonDraftName) == str(pokemonActual["name"]):
 
                             if pokemonActual["owner"] != None:
-                                iterUser["draftList"].remove(pokemonDraftName)
+                                iterUser["draftList"].remove(str(pokemonDraftName))
                                 writeDataFile()
                                 print("ERROR: removed a draft entry at an odd time...")
+
+                            if (pokemonActual["mega"] == "1" and iterUser["draftedMega"] == True):
+                                print(iterUser["draftList"])                            
+                                iterUser["draftList"].remove(str(pokemonDraftName))
+                                writeDataFile()
+
 
 
             # if it's still populated even after being cleaned, we attempt to draft their top entry
@@ -1436,6 +1358,15 @@ def draft_iterator():
                 for pokemonActual in MAIN_DATA["freePokemon"]:
                     if iterUser["draftList"][0] == pokemonActual["name"]:
                         if pokemonActual["owner"] is None:
+
+                            # this shouldn't occur in regular execution
+                            if (pokemonActual["mega"] == "1" and iterUser["draftedMega"] == True):
+                                print("ERROR: Can't draft Mega for user that already has a Mega!")
+                                iterUser["draftList"].remove(iterUser["draftList"][0])
+                                return
+
+                            if (pokemonActual["mega"] == "1"):
+                                iterUser["draftedMega"] = True
 
                             # This is their first pick, so draft it now
                             
@@ -1492,7 +1423,7 @@ def draft_iterator():
                 randomPick = random.randint(0, len(MAIN_DATA["freePokemon"])-1 )
 
                 # If pick is legal and passable, select it
-                if (MAIN_DATA["freePokemon"][randomPick]["owner"] is None) and (int(MAIN_DATA["freePokemon"][randomPick]["tier"]) <= 5) and (int(MAIN_DATA["freePokemon"][randomPick]["tier"]) >= 1):
+                if (MAIN_DATA["freePokemon"][randomPick]["owner"] is None) and (int(MAIN_DATA["freePokemon"][randomPick]["tier"]) <= 5) and (int(MAIN_DATA["freePokemon"][randomPick]["tier"]) >= 4):
                     randomPokemonSelectedFlag = True
 
 
@@ -1645,6 +1576,9 @@ e.g. !available Normal
 **!search**: Use to see which viable Pokemon of a specific type are still available. Sorted by approximate popularity. Doesn't display useless Pokemon.
 e.g. !search Normal
 
+**!search_mega**: Use to see which Mega-Pokemon are still available.
+e.g. !search_mega
+
 **!mystery**: ???
 """
 
@@ -1703,6 +1637,10 @@ e.g. !search Normal
         response = command_search(msg)
         return response
 
+    if command == "!search_mega":
+        response = command_search_mega(msg)
+        return response
+
     if command == "!tiers":
         response = command_tiers(msg)
         return response
@@ -1726,7 +1664,6 @@ e.g. !search Normal
     else:
         pass
         # print("Processing privileged command for: " + msg.author.name)
-
 
 
     if command == "!start_draft":
@@ -1851,3 +1788,6 @@ def main():
     client.close()
 
 main()
+
+# if __name__ == "__main__":
+#     main()
