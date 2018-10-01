@@ -2,7 +2,7 @@
 
 Discord Bot used to automate and manage competitive Pokémon Draft Leagues.
 
-Tested on Python 3.5, 3.6
+Tested on Python 3.6
 
 --------------------------------------------------------------------------------------------------
 
