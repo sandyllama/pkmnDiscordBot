@@ -20,7 +20,7 @@ Features:
 TODO:
 - Add support for Tiered and Point drafts.
 - Bust out configuration into its own file to make setup easier.
-- 
+- Fix 500 exception to be handled (I think this happens when Discord resets their servers for maintenance or something?)
 
 --------------------------------------------------------------------------------------------------
 
