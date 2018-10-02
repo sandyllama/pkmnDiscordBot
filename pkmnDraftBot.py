@@ -1682,6 +1682,8 @@ e.g. !available Normal
 **!search**: Use to see which viable Pokemon of a specific type are still available. Sorted by approximate popularity. Doesn't display useless Pokemon.
 e.g. !search Normal
 
+**!export**: Use to print your team in text format to be easily copied and pasted into Showdown.
+
 **!mystery**: ???
 """
 
