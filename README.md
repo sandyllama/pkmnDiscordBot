@@ -1,7 +1,6 @@
 # pkmnDiscordBot
 
-## [2023-09-06] The discord API has changed since I wrote this.
-## Logic for communicating with Discord needs totally rewritten.
+### [2023-09-06] Note that the discord API has changed since I wrote this. Logic for communicating with Discord needs totally rewritten.
 
 Discord Bot used to automate and manage competitive Pokémon Draft Leagues.
 
